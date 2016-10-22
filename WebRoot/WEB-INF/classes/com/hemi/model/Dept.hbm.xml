@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+     <class name="com.hemi.model.Dept" table="dept" >
+        <id name="deptno">
+            <column name="deptno"/>
+            <generator class="assigned" />
+        </id>
+        <property name="dname" >
+            <column name="dname"  />
+        </property>
+        <set name="emps" lazy="false" cascade="save-update,delete">
+ 			<key column="deptno"></key>
+ 			<one-to-many class="com.hemi.model.Emp"/>       
+        </set>
+   </class>
+   
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+     <class name="com.hemi.model.Emp" table="emp" >
+        <id name="id" type="java.lang.Integer">
+            <column name="empno"/>
+            <generator class="assigned" />
+        </id>
+        <property name="name" >
+            <column name="ename"  />
+        </property>
+        <property name="salary" >
+            <column name="salary"  />
+        </property>
+        <many-to-one name="dept" class="com.hemi.model.Dept" lazy="false">
+        	<column name="deptno"></column>
+        </many-to-one>
+   </class>
+   
+</hibernate-mapping>

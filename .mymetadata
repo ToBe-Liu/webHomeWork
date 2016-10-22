@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="com.u2.8_web_hibernate2"
+  id="myeclipse.1476070857369"
+  context-root="/com.u2.8_web_hibernate2"
+  j2ee-spec="6.0"
+  archive="com.u2.8_web_hibernate2.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
